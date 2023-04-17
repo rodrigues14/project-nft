@@ -35,4 +35,7 @@ public class Cause {
 
     @Column(nullable = false)
     private BigDecimal arrecadado;
+
+    public void setId(Long id) {
+    }
 }
