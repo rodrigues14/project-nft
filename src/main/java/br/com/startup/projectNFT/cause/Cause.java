@@ -24,7 +24,6 @@ public class Cause {
     @Column(nullable = false)
     private String descricao;
 
-    @Column(nullable = false)
     private Boolean situacao;
 
     @Enumerated(EnumType.STRING)
@@ -39,16 +38,12 @@ public class Cause {
     public void setId(Long id) {
     }
 
-    /*
-    public Cause(CauseDtoo cause) {
-        this.nome = cause.;
-        this.descricao = cause.;
-        this.situacao = cause.;
-        this.categoria = cause.;
-        this.meta = cause.;
-        this.arrecadado = cause.;
+    public Cause(CauseDto cause) {
+        this.nome = cause.nome();
+        this.descricao = cause.descricao();
+        this.situacao = cause.situacao();
+        this.categoria = cause.categoria();
+        this.meta = cause.meta();
+        this.arrecadado = cause.arrecadado();
     }
-
-     */
-    
 }

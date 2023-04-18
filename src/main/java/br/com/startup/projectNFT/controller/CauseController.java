@@ -1,9 +1,10 @@
 package br.com.startup.projectNFT.controller;
 import br.com.startup.projectNFT.cause.Cause;
+import br.com.startup.projectNFT.cause.CauseDto;
 import br.com.startup.projectNFT.cause.CauseRepository;
-import org.springframework.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,9 +24,9 @@ public class CauseController {
     }
 
     @PostMapping
-    public ResponseEntity<Cause> create(@RequestBody Cause cause) {
-        Cause savedCause = causeRepository.save(cause);
-        return ResponseEntity.status(HttpStatus.CREATED).body(savedCause);
+    @Transactional
+    public void cadastrarCausa(@RequestBody CauseDto causeDto) {
+        causeRepository.save(new Cause(causeDto));
     }
 
     @PutMapping("/{id}")

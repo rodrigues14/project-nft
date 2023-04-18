@@ -39,6 +39,17 @@ public class Nft {
     @Column(nullable = false)
     private boolean sale;
 
+    public Nft(NftDto nftDto) {
+        this.tokenId = nftDto.tokenId();
+        this.url = nftDto.url();
+        this.cause = nftDto.cause();
+        this.price = nftDto.price();
+        this.description = nftDto.description();
+        this.wallet = nftDto.wallet();
+        this.sale = nftDto.sale();
+
+    }
+
     public Long getId() {
         return id;
     }

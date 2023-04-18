@@ -1,15 +1,16 @@
 package br.com.startup.projectNFT.nft;
 
+import br.com.startup.projectNFT.cause.Cause;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
 public record NftDto(
+//        @NotNull
+//        Long causeId,
         @NotNull
-        Long causeId,
-        @NotBlank
-        String causeName,
+        Cause cause,
         @NotBlank
         String description,
         @NotNull
