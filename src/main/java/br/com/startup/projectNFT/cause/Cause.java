@@ -36,6 +36,18 @@ public class Cause {
     @Column(nullable = false)
     private BigDecimal arrecadado;
 
+    /*
+    public Cause(CauseDtoo cause) {
+        this.nome = cause.;
+        this.descricao = cause.;
+        this.situacao = cause.;
+        this.categoria = cause.;
+        this.meta = cause.;
+        this.arrecadado = cause.;
+    }
+
+     */
+
     public void setId(Long id) {
     }
 }

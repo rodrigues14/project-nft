@@ -22,5 +22,10 @@ public class User {
 
     @Column(nullable = false, unique = true)
     private String email;
+
+    public User(UserDto user) {
+        this.wallet = new Wallet(user.wallet());
+        this.email = user.email();
+    }
 }
 

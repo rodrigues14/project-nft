@@ -26,5 +26,9 @@ public class Wallet {
     @Column(nullable = false)
     private BigDecimal balance;
 
-    // Construtores, getters e setters
+    public Wallet(WalletDto wallet) {
+        this.publicKey = wallet.publicKey();
+        this.balance = wallet.balance();
+    }
+
 }
