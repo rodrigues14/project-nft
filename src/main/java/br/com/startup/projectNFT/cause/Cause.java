@@ -36,6 +36,9 @@ public class Cause {
     @Column(nullable = false)
     private BigDecimal arrecadado;
 
+    public void setId(Long id) {
+    }
+
     /*
     public Cause(CauseDtoo cause) {
         this.nome = cause.;
@@ -47,7 +50,5 @@ public class Cause {
     }
 
      */
-
-    public void setId(Long id) {
-    }
+    
 }
