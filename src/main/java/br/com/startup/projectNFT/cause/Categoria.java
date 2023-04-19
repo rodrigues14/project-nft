@@ -4,7 +4,7 @@ public enum Categoria {
     ALIMENTACAO("Alimentação"),
     EDUCACAO("Educação"),
     SANITARIO("Sanitario"),
-    VESTIMENTENTA("Vestimenta"),
+    VESTIMENTA("Vestimenta"),
     ANIMAIS("Animais"),
     INCENDIOS("Incêndios"),
 

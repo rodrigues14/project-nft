@@ -12,10 +12,8 @@ public record CauseDto(
         String nome,
         @NotBlank
         String descricao,
-
         Boolean situacao,
         @NotNull
-        @Enumerated(EnumType.STRING)
         Categoria categoria,
         @NotNull
         BigDecimal meta,
